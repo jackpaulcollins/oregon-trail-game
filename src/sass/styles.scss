@@ -1,8 +1,59 @@
-$font-stack: Helvetica, sans-serif;
+$font-stack: Stranger back in the Night, sans-serif;
 $primary-font-color: red;
 
 body {
-  font: 100% $font-stack;
   color: $primary-font-color;
-  background-color: pink;
+  background-image: url("../assets/images/forest-bg.jpg");
+  background-size: cover;
+}
+
+.main-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 5% 1fr 1fr;
+  .heading {
+    text-align: center;
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  h3{
+    text-align: center;
+    font: 100% $font-stack;
+    font-size: 2em;
+  }
+
+#demo{
+    font: 100% $font-stack;
+    text-align: center;
+    color: white;
+    font-size: 8em;
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+}
+
+h1 {
+  font: 100% $font-stack;
+  font-size: 10em;
+  margin-bottom: -2%;
+
+}
+
+.fas{
+  color: white;
+  margin: 20px 0 0 20px;
+}
+
+.navbar-hidden{
+  background-color: rgba(56, 56, 56, .5);
+  margin: 40% auto 0 20%;
+  grid-row-start: 2;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  font: 100% "Scare Arms";
+  text-align: center;
+  color: white;
+  font-size: 8em;
 }

@@ -1,19 +1,28 @@
 $font-stack: Stranger back in the Night, sans-serif;
 $primary-font-color: red;
 
-// * {
-//   border: 2px dashed green;
-// }
+*{
+  padding: 0;
+  margin: 0;
+}
 
 body {
   color: $primary-font-color;
-  background-image: url("../assets/images/forest-bg.jpg");
+  font-size: calc(100% + -.2vw);
+}
+
+.container{
+  background-image: url("../assets/images/forrest-bg-picture.jpeg");
   background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
 
 .main-grid {
   display: grid;
   justify-content: center;
+  height: 100%;
+  align-items: center;
   grid-template-columns: 26% 48% 26%;
   grid-template-rows: 10% 1fr 1fr;
   .heading {
@@ -27,13 +36,14 @@ body {
     font-size: 2em;
   }
 
-#demo{
+.countDown{
     font: 100% $font-stack;
     text-align: center;
     color: white;
     font-size: 8em;
     grid-column-start: 2;
     grid-row-start: 3;
+    margin: 100px 0 0  0;
   }
 }
 
@@ -66,6 +76,8 @@ span:hover {
   max-width: 300px;
   display: none;
   flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
   font: 100% "Scare Arms";
   text-align: center;
   color: white;
@@ -75,6 +87,24 @@ span:hover {
   }
 }
 
+span{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 20px;
+}
+
+.platform {
+  background-color: white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+}
+
+.background-image{
+  flex-shrink: 0;
+}
 @media screen and (max-width: 1200px) {
   .navbar-hidden {
     grid-row-start: 1;
@@ -97,3 +127,44 @@ span:hover {
     display: none;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .container {
+    background-image: url("../assets/images/forrest-bg-mobile.jpg");
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .heading {
+    margin-bottom: -5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .countDown {
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+#demo{
+  font-size: 5rem;
+  margin: 45px 0 0 0;
+}
+
+  .navbar-hidden {
+    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 1/ span 3;
+    flex-direction: row;
+    margin-top: 25px;
+  }
+}
+
+// @media screen and (max-width: 350px) {
+//   .heading {
+//     grid-column-start: 1/ span 3;
+//   }
+// }

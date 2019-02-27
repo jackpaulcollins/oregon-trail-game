@@ -1,6 +1,5 @@
 import './sass/styles.scss';
-
-
+import $ from "jquery";
 
 var countDownDate = new Date("Apr 26, 2019 13:45:00").getTime();
 
@@ -32,8 +31,8 @@ var x = setInterval(function() {
 
 
 $(document).ready(function(){
-  $("#menu").onClick(function(event){
+  $("#menu").click(function(event){
     event.preventDefault();
-    $("#nav").show();
+    $("#nav").toggle();
   })
 });

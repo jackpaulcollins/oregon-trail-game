@@ -18,6 +18,94 @@ body {
   overflow: hidden;
 }
 
+.team-container {
+  background-image: url("../assets/images/team-bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  font-size: calc(100% + -.5vw);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 50px;
+  grid-template-rows: 200px 1fr;
+    img{
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+    }
+    h2 {
+      font-size: 50px;
+      text-align: center;
+      font: 100% "scare arms";
+    }
+}
+
+.team-home{
+  width: 50px !important;
+  height: 50px !important;
+  margin: 20px 0 0 40px;
+  grid-column-start: 1;
+  background-color: black;
+  border: 1px solid red;
+}
+
+.team-head{
+  grid-column-start: 3;
+  text-align: center;
+  h1 {
+    font-size: 26em;
+  }
+}
+
+
+.dev1{
+  grid-column-start: 2;
+  grid-row-start: 2;
+  margin: 100px auto 0 auto;
+  p {
+    background-color: rgba(25, 25, 25, .5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-size: 3em;
+    font-family: sans-serif;
+    margin: 40px auto 0 auto;
+  }
+}
+
+.dev2{
+  grid-column-start: 3;
+  grid-row-start: 2;
+  margin: 100px auto 0 auto;
+  p {
+    background-color: rgba(25, 25, 25, .5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-size: 3em;
+    font-family: sans-serif;
+    margin: 40px auto 0 auto;
+  }
+}
+.dev3{
+  grid-column-start: 4;
+  grid-row-start: 2;
+  margin: 100px auto 0 auto;
+  p {
+    background-color: rgba(25, 25, 25, .5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-size: 3em;
+    font-family: sans-serif;
+    margin: 40px auto 0 auto;
+  }
+}
 .main-grid {
   display: grid;
   justify-content: center;
@@ -29,12 +117,12 @@ body {
     text-align: center;
     grid-column-start: 2;
     grid-row-start: 2;
-  }
-  h3{
-    text-align: center;
+    h3 {
     font: 100% "who asks satan";
-    font-size: 2em;
+    font-size: 3em;
+    }
   }
+}
 
 .countDown{
     font: 100% $font-stack;
@@ -45,7 +133,6 @@ body {
     grid-row-start: 3;
     margin: 100px 0 0  0;
   }
-}
 
 h1 {
   font: 100% $font-stack;
@@ -54,7 +141,7 @@ h1 {
 
 }
 
-.fas{
+#menu{
   color: white;
   margin: 20px 0 0 20px;
 }
@@ -70,7 +157,6 @@ span:hover {
 }
 
 .navbar-hidden{
-  // background-color: rgba(56, 56, 56, .5);
   grid-row-start: 2;
   display: flex;
   max-width: 300px;
@@ -105,14 +191,140 @@ span{
 .background-image{
   flex-shrink: 0;
 }
+
+//blog page styling
+
+.blog-home{
+  width: 50px !important;
+  height: 50px !important;
+  margin: 20px 0 0 40px;
+  grid-column-start: 1;
+  background-color: black;
+  border: 1px solid red;
+  grid-row-start: 15;
+}
+
+.blog-container{
+  background-image: url("../assets/images/team-bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  font-size: calc(100% + -.5vw);
+}
+
+.blog-grid{
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: repeat(auto, 1fr);
+}
+
+.blog-head{
+  grid-column: 2;
+  grid-row-start: 1;
+  text-align: center;
+}
+
+.blog-home {
+  grid-column: 1;
+  grid-row-start: 1;
+  border-radius: 50%;
+}
+
+.blog-posts {
+  display: grid;
+  grid-column-start: 2;
+  grid-template-columns: 1fr;
+  grid-auto-rows: repeat(4, 1fr);
+  .post{
+    margin-top: 100px;
+    padding: 30px 0 30px 0;
+    grid-column: 1;
+    text-align: center;
+    background-color: rgba(25, 25, 25, .8);
+    border-radius: 10px;
+    h2 {
+      font-size: 4em;
+      color: white;
+    }
+    p {
+      font-size: 3em;
+      color: white;
+    }
+  }
+}
+
+
+// reviews page styling
+
+.reviews-grid {
+  background-image: url("../assets/images/team-bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  font-size: calc(100% + -.5vw);
+}
+
+.reviews-grid{
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.reviews-header{
+  grid-column-start: 2;
+  text-align: center;
+}
+
+.user-reviews-grid{
+  margin-top: 10%;
+  text-align: center;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.review{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 0 auto 0 auto;
+  width: 90%;
+  background-color: rgba(25, 25, 25, .6);
+  h2 {
+    color: white;
+    font-size: 3rem;
+    align-self: center;
+  }
+  h4 {
+    margin-top: 50px;
+    color: white;
+    font-size: 2rem;
+  }
+}
+
+i #star{
+  height: 50px;
+  width: 50px;
+  color: yellow;
+  border: 1px solid red;
+}
+
+#reviews-home{
+  width: 50px !important;
+  height: 50px !important;
+  margin: 20px 0 0 40px;
+  grid-column-start: 1;
+  background-color: black;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+
 @media screen and (max-width: 1200px) {
   .navbar-hidden {
+    display: show;
     grid-row-start: 1;
     grid-column-start: 2;
-    text-align: center;
-    align-self: center;
-    margin-right: auto;
-    margin-left: auto;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -127,6 +339,8 @@ span{
     display: none;
   }
 }
+
+
 
 @media screen and (max-width: 450px) {
   .container {
@@ -154,6 +368,7 @@ span{
 }
 
   .navbar-hidden {
+    display: show;
     font-size: 2em;
     margin-left: auto;
     margin-right: auto;
